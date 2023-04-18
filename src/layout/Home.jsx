@@ -4,7 +4,7 @@ import {
   ExportOutlined,
 } from "@ant-design/icons";
 import { Typography } from "antd";
-import { Layout, Menu, theme, Space } from "antd";
+import { Layout, Menu, theme, Button } from "antd";
 import { useState } from "react";
 import { createFromIconfontCN } from "@ant-design/icons";
 import Logo from "../assets/logoaia.png";
@@ -96,11 +96,22 @@ const Home = () => {
               paddingRight: "20px",
             }}
           >
-            <div style={{display: "flex",
-          gap:"8px"}}>
-              <p style={{color: "white", fontWeight:"400"}}>Sign Out</p>
-              <ExportOutlined style={{ color: "white", fontSize: "20px", marginTop:"1px" }} />
-            </div>
+            <ConfigProvider
+              theme={{
+                token: {
+                  colorBgContainer: "#DB0026",
+                  colorBorder: "#DB0026",
+                  colorText: "white",
+                  colorPrimary: "black",
+                  colorBgTextHover: "white",
+                },
+              }}
+            >
+              <Button>
+                <ExportOutlined />
+                Sign Out
+              </Button>
+            </ConfigProvider>
           </div>
         </Header>
         <Content
@@ -115,8 +126,7 @@ const Home = () => {
               minHeight: 490,
               background: colorBgContainer,
             }}
-          >
-          </div>
+          ></div>
         </Content>
         <Footer
           style={{

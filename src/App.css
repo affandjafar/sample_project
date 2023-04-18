@@ -38,9 +38,10 @@
   }
 }
 
-/* .ant-menu-item.ant-menu-item-selected{
-  color: black;
-} */
+.ant-btn.css-dev-only-do-not-override-k9c4yu.ant-btn-default:hover{
+  border: none;
+  background-color: white;
+}
 
 .ContainerOTP{
   display: block;
